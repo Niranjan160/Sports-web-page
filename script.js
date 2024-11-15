@@ -4,6 +4,11 @@ function toggleMenu() {
     navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
   }
   
+
+  function registerForMarathon() {
+    alert("Thank you for registering for Marathon 2024! We'll contact you with more details.");
+  }
+  
   // Alert message for "Explore Now" button
   function showAlert() {
     alert("Welcome to SportsHub! Explore our site for the latest updates.");
