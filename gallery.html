@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Fight and Fly Sports Academy</title>
+  <title>About - Fight and Fly Sports Academy</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,6 +15,7 @@
       <h2>Tiruchirappalli District</h2>
     </div>
     <nav class="navbar">
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -24,17 +25,31 @@
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     </nav>
   </header>
 
-  <!-- Home Section -->
-  <section id="home" class="hero-section">
-    <h1>Welcome to Fight and Fly Sports Academy</h1>
-    <p>Your gateway to excellence in sports training and development.</p>
-    <!-- <button >Join Us Now</button> -->
-  
+<!-- Gallery Section -->
+<section id="gallery" class="gallery-section">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="images/1.jpeg" alt="Gallery Image 1" onclick="viewFullSize(this)">
+    <img src="images/5.jpeg" alt="Gallery Image 2" onclick="viewFullSize(this)">
+    <img src="images/4.jpeg" alt="Gallery Image 3" onclick="viewFullSize(this)">
+    <img src="images/2.jpeg" alt="Gallery Image 4" onclick="viewFullSize(this)">
+    <img src="images/3-1.jpeg" alt="Gallery Image 5" onclick="viewFullSize(this)">
+    <img src="images/3-2.jpeg" alt="Gallery Image 6" onclick="viewFullSize(this)">
+    <img src="images/3-3.jpeg" alt="Gallery Image 7" onclick="viewFullSize(this)">
+    <img src="images/6.jpeg" alt="Gallery Image 8" onclick="viewFullSize(this)">
+  </div>
+
+  <!-- Modal for Full-Size View -->
+  <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="fullImage" class="modal-content" alt="Full Size">
+  </div>
 </section>
+
+
 
  <!-- Footer -->
 <footer>
@@ -103,3 +118,4 @@
   
 </body>
 </html>
+
