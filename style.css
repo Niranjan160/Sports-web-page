@@ -1,0 +1,366 @@
+/* Reset */
+  /* Logo Container */
+  .logo-container {
+    text-align: center;
+    background-color: #333; /* Dark background to match the logo */
+    padding: 1rem;
+    color: #FFD700; /* Gold color for text */
+  }
+  
+  .logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .logo-container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFD700; /* Gold */
+  }
+  
+  .logo-container h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #FFD700; /* Gold */
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    color: #ddd;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-section button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #333;
+    padding: 1rem;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 1rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  .hero-section {
+    background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+  }
+  
+  .about-section,
+  .gallery-section,
+  .news-section,
+  .events-section,
+  .blog-section,
+  .contact-section {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .news-item,
+  .blog-post {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  /* footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  } */
+  /* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: start;
+    gap: 1.5rem;
+  }
+  
+  .footer-logo {
+    text-align: center;
+  }
+  
+  .footer-logo-img {
+    width: 80px;
+    border-radius: 50%;
+  }
+  
+  /* .footer-menu,
+  .footer-social,
+  .footer-contact {
+    max-width: 200px;
+  }
+  
+  .footer-menu h3,
+  .footer-social h3,
+  .footer-contact h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-menu ul li {
+    margin: 0.3rem 0;
+  }
+  
+  .footer-menu ul li a {
+    color: #FFD700;
+    text-decoration: none;
+  }
+  
+  .footer-menu ul li a:hover {
+    text-decoration: underline;
+  } */
+   /* Footer Menu Styling */
+/* Footer Menu Styling */
+.footer-menu {
+    text-align: left;
+  }
+  
+  .footer-menu h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+  
+  .footer-menu h3::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #FFD700; /* Matches the logo color */
+    margin: 0.5rem 0;
+  }
+  
+  .footer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Ensures items are left-aligned */
+  }
+  
+  .footer-menu ul li {
+    margin: 0.3rem 0;
+  }
+  
+  .footer-menu ul li a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .footer-menu ul li a:hover {
+    color: #ffffff; /* Changes to white on hover */
+    text-shadow: 0 0 5px #FFD700; /* Adds a golden glow effect */
+  }
+     
+  /* .footer-social a {
+    display: inline-block;
+    margin: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-social img {
+    width: 30px;
+  }
+  
+  .footer-social a:hover img {
+    transform: scale(1.1);
+  }
+  
+  .footer-contact p {
+    margin: 0.3rem 0;
+  }
+  
+  .geolocation-link {
+    display: flex;
+    align-items: center;
+    color: #FFD700;
+    text-decoration: none;
+    margin-top: 0.5rem;
+  }
+  
+  .geolocation-link img {
+    width: 20px;
+    margin-right: 5px;
+  }
+  
+  .geolocation-link:hover {
+    text-decoration: underline;
+  }
+  .location{
+    width: 200;
+    height: 300;
+    border: 0;
+  }
+  
+  .footer-bottom {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #ccc;
+  } */
+   /* Footer Contact Styling */
+.footer-contact {
+    text-align: left; /* Aligns content to the left */
+  }
+  
+  .footer-contact h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+  
+  .footer-contact h3::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #FFD700; /* Matches the logo color */
+    margin: 0.5rem 0;
+  }
+  
+  .footer-contact p {
+    margin: 0.3rem 0;
+  }
+  
+  .geolocation-link {
+    display: flex;
+    align-items: center;
+    color: #FFD700;
+    text-decoration: none;
+    margin-top: 0.5rem;
+  }
+  
+  .geolocation-link img {
+    width: 20px;
+    margin-right: 5px;
+  }
+  
+  .geolocation-link:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* Responsive Footer */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444; /* Slightly lighter dark background */
+  }
+  
+  .nav-links a {
+    color: #FFD700; /* Gold links */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-links a:hover {
+    color: #FFA500; /* Dark orange on hover */
+  }
+  
