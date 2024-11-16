@@ -69,32 +69,64 @@
     padding: 1rem;
   }
   
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: center; /* Center the navbar items */
+  align-items: center;
+  background-color: #444; /* Keep the existing background color */
+  padding: 1rem 0; /* Add some vertical padding */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem; /* Space between nav items */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links .nav-link {
+  color: #fffffc ; /* Golden color for nav links */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links .nav-link:hover {
+  color: #FFA500; /* Slightly darker golden on hover */
+  text-decoration: none; /* Optional: underline effect on hover */
+}
+
+/* Navbar Toggle Button */
+.navbar-toggler {
+  border-color: #FFD700; /* Golden border for the toggle button */
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgb(255,215,0)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  /* Golden icon for the toggle */
+}
+
+/* Center Align Links in Mobile View */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    justify-content: center; /* Center align in collapsed view */
   }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
+}
+
+/* Remove Toggle Button for Larger Screens */
+@media (min-width: 992px) {
+  .navbar .collapse {
+    display: flex !important; /* Always show links on large screens */
   }
-  
-  .nav-links li {
-    margin-left: 1rem;
+
+  .navbar-toggler {
+    display: none; /* Hide toggle button */
   }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .menu-toggle {
-    display: none; 
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-  }
+}
+
   
   .hero-section {
     background: url(images/sportsbg.jpg) no-repeat center center/cover;
@@ -556,23 +588,6 @@
   border-top: 1px solid #555;
   margin-top: 20px;
 }
- /* Navbar */
- .navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #444; 
-}
-
-.nav-links a {
-  color: #FFD700; 
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.nav-links a:hover {
-  color: #FFA500; 
-}
 
   /* Responsive Footer */
   @media (max-width: 768px) {
@@ -584,29 +599,6 @@
   
   
   @media (max-width: 768px) {
-    .nav-links {
-      display: none; 
-      flex-direction: column; 
-      background-color: #333; 
-      position: absolute;
-      top: 100%; 
-      left: 0;
-      width: 100%;
-      padding: 1rem 0;
-      z-index: 10;
-    }
-    .nav-links a {
-      padding: 0.5rem 1rem;
-      color: white;
-      text-decoration: none;
-    }
-    .nav-links a:hover {
-      background-color: #444; 
-    }
-    .menu-toggle {
-      display: block;
-    }
-  
     .gallery-grid {
       grid-template-columns: 1fr;
     }
