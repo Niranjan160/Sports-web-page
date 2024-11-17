@@ -420,7 +420,7 @@
    footer {
   background-color: #333;
   color: #fff;
-  padding: 2rem 1rem;
+  padding-top: 0;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -435,16 +435,16 @@
   align-items: start;
   width: 100%;
   max-width: 1200px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   gap: 1.5rem;
-
+  padding-top: 20px;
 }
 
 .footer-content > div {
   flex: 1;
   min-width: 200px;
-  margin: 10px 0;
-  padding: 10px;
+  margin:  0;
+  padding: 1px;
   box-sizing: border-box;
 }
 
@@ -497,14 +497,14 @@
 }
 
 .footer-menu {
-  text-align: left;
+  text-align: center; /* Center text alignment */
 }
 
 .footer-menu h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   position: relative;
-  color: #FFD700;
+  color: #FFD700; /* Golden heading color */
 }
 
 .footer-menu h3::after {
@@ -512,30 +512,31 @@
   display: block;
   width: 50px;
   height: 2px;
-  background-color: #FFD700;
-  margin: 0.5rem 0;
+  background-color: #FFD700; /* Golden underline */
+  margin: 0.5rem auto; /* Center underline */
 }
 
 .footer-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: left;
+  text-align: center; /* Align the list items center */
+  display: inline-block; /* Inline the list for proper centering */
 }
 
 .footer-menu ul li {
-  margin: 0.3rem 0;
+  margin: 0.3rem 0; /* Vertical spacing between menu items */
 }
 
 .footer-menu ul li a {
-  color: #ffffff;
+  color: #ffffff; /* White text color */
   text-decoration: none;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .footer-menu ul li a:hover {
-  color: #ffffff;
-  text-shadow: 0 0 5px #FFD700; 
+  color: #ffa500; /* Slightly darker hover effect */
+  text-shadow: 0 0 5px #FFD700; /* Glow effect */
 }
 
 .footer-social img {
@@ -581,12 +582,28 @@
 }
 
 .footer-bottom {
-  text-align: center;
-  font-size: 14px;
-  padding: 10px 0;
-  width: 100%;
-  border-top: 1px solid #555;
-  margin-top: 20px;
+  text-align: center; /* Centers the text */
+  font-size: 0.9rem; /* Makes the text size consistent */
+  padding: 0.5rem 0; /* Adds balanced vertical padding */
+  margin: 0; /* Removes any default margins */
+  background-color: #333; /* Matches the footer background */
+  border-top: 1px solid #555; /* Optional: subtle separation line */
+  color: #fff; /* White text color */
+}
+
+.footer-bottom p {
+  margin: 0.3rem 0; /* Adds small vertical spacing between lines */
+}
+
+.footer-bottom a {
+  color: #FFD700; /* Golden color for links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline; /* Underlines on hover for clarity */
+  color: #FFA500; /* Slightly darker golden hover effect */
 }
 
   /* Responsive Footer */
