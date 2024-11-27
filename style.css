@@ -661,7 +661,7 @@
 .footer-bottom {
   text-align: center; /* Centers the text */
   font-size: 0.9rem; /* Keeps the text size consistent */
-  padding: 1rem 0; /* Add some vertical padding */
+  padding: 0; /* Add some vertical padding */
   width: 100%; /* Make sure it spans the full width */
   background-color: #333; /* Matches the footer background */
   border-top: 1px solid #555; /* Subtle separation line */
