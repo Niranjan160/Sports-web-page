@@ -1,30 +1,89 @@
-/* Reset */
-  /* Logo Container */
-  .logo-container {
-    text-align: center;
-    background-color: #333;
-    padding: 1rem;
-    color: #FFD700; 
-  }
-  
+
+  /* Header Styling */
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  padding: 1rem;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  text-align: center;
+}
+
+/* Logo Styling */
+.logo {
+  width: 15%; /* Set initial size relative to the container */
+  max-width: 150px; /* Prevent the logo from becoming too large */
+  height: auto;
+  margin-right: 1rem; /* Add space between logo and text */
+}
+
+/* Heading Styling */
+.logo-container h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #FFD700;
+  margin: 0;
+}
+
+.logo-container h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #FFD700;
+  margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
   .logo {
-    width: 150px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    width: 20%; /* Increase the logo size slightly for medium screens */
+    margin-right: 0.5rem;
   }
-  
+
   .logo-container h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #FFD700; 
+    font-size: 2rem; /* Reduce heading size */
   }
-  
+
   .logo-container h2 {
-    font-size: 1.2rem;
-    font-weight: normal;
-    color: #FFD700; 
+    font-size: 1rem;
   }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 25%; /* Further increase logo size for smaller screens */
+  }
+
+  .logo-container {
+    flex-direction: column; /* Stack logo and headings vertically */
+    text-align: center;
+  }
+
+  .logo-container h1 {
+    font-size: 1.8rem; /* Further reduce heading size */
+  }
+
+  .logo-container h2 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 30%; /* Maximize logo size for very small screens */
+  }
+
+  .logo-container h1 {
+    font-size: 1.5rem; /* Make headings compact */
+  }
+
+  .logo-container h2 {
+    font-size: 0.8rem;
+  }
+}
+
+
   
 * {
     margin: 0;
@@ -135,6 +194,8 @@
     padding: 5rem 2rem;
 
   }
+
+
   
   .about-section,
   .gallery-section,
@@ -148,29 +209,44 @@
   
 
   /* Gallery Section */
-.gallery-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+/* Gallery Section */
+#gallery {
+  text-align: center;
+  padding: 2rem;
 }
 
-.gallery-container img {
-  width: 150px;
+#gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Grid Layout for Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid with flexible columns */
+  gap: 1rem; /* Space between images */
+  justify-items: center; /* Center align images */
+}
+
+/* Image Styling */
+.gallery-grid img {
+  width: 100%;
   height: auto;
+  object-fit: cover; /* Ensures images fit within their grid cells */
+  border-radius: 8px; /* Rounded corners for images */
   cursor: pointer;
-  border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-container img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Hover Effect for Images */
+.gallery-grid img:hover {
+  transform: scale(1.05); /* Slight zoom-in effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
 }
 
-/* Modal Styling */
+/* Modal Styling for Full-Size View */
 .modal {
-  display: none; 
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -186,6 +262,7 @@
   max-width: 90%;
   max-height: 90%;
   border-radius: 8px;
+  object-fit: contain; /* Ensures the image is fully contained within the modal */
 }
 
 .modal .close {
@@ -202,13 +279,6 @@
   color: #ff5a5f;
 }
 
-/* Gallery Grid */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    gap: 1rem; /* Space between items */
-    justify-content: center;
-  }
   
   /* Uniform Boxed Images */
   .gallery-grid img {
@@ -454,9 +524,13 @@
 
 .footer-logo-img {
   width: 80px;
+  height: auto;
   border-radius: 50%;
+  margin-bottom: 1rem;
 }
-
+.footer-content h3{
+  color: #FFD700;
+}
 
 .footer-logo img,
 .footer-social img {
@@ -496,15 +570,15 @@
   color: #ffffff; 
 }
 
-.footer-menu {
-  text-align: center; /* Center text alignment */
+/* .footer-menu {
+  text-align: center; 
 }
 
 .footer-menu h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   position: relative;
-  color: #FFD700; /* Golden heading color */
+  color: #FFD700; 
 }
 
 .footer-menu h3::after {
@@ -512,44 +586,46 @@
   display: block;
   width: 50px;
   height: 2px;
-  background-color: #FFD700; /* Golden underline */
-  margin: 0.5rem auto; /* Center underline */
+  background-color: #FFD700; 
+  margin: 0.5rem auto; 
 }
 
 .footer-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: center; /* Align the list items center */
-  display: inline-block; /* Inline the list for proper centering */
+  text-align: center; 
+  display: inline-block;
 }
 
 .footer-menu ul li {
-  margin: 0.3rem 0; /* Vertical spacing between menu items */
+  margin: 0.3rem 0; 
 }
 
 .footer-menu ul li a {
-  color: #ffffff; /* White text color */
+  color: #ffffff; 
   text-decoration: none;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .footer-menu ul li a:hover {
-  color: #ffa500; /* Slightly darker hover effect */
-  text-shadow: 0 0 5px #FFD700; /* Glow effect */
-}
+  color: #ffa500; 
+  text-shadow: 0 0 5px #FFD700; 
+  } 
+  .footer-menu ul li a:hover {
+    color: #ffa500;
+  } */
 
 .footer-social img {
   width: 30px;
+    margin: 0 0.5rem;
+
 }
 
 .footer-social a:hover img {
   transform: scale(1.1);
 }
 
-.footer-menu ul li a:hover {
-  color: #ffa500;
-}
 .footer-contact {
   text-align: left;
   color: #FFD700; 
@@ -575,20 +651,21 @@
 }
 .footer-contact iframe {
   width: 100%;
-  max-width: 300px;
-  height: 200px;
+  max-width: 500px;
+  height: 150px;
   border: 0;
   margin-top: 10px;
 }
 
+/* Footer Bottom Section */
 .footer-bottom {
   text-align: center; /* Centers the text */
-  font-size: 0.9rem; /* Makes the text size consistent */
-  padding: 0.5rem 0; /* Adds balanced vertical padding */
-  margin: 0; /* Removes any default margins */
+  font-size: 0.9rem; /* Keeps the text size consistent */
+  padding: 1rem 0; /* Add some vertical padding */
+  width: 100%; /* Make sure it spans the full width */
   background-color: #333; /* Matches the footer background */
-  border-top: 1px solid #555; /* Optional: subtle separation line */
-  color: #fff; /* White text color */
+  border-top: 1px solid #555; /* Subtle separation line */
+  margin-top: 1rem; /* Small gap above to separate from other footer content */
 }
 
 .footer-bottom p {
@@ -602,9 +679,10 @@
 }
 
 .footer-bottom a:hover {
-  text-decoration: underline; /* Underlines on hover for clarity */
-  color: #FFA500; /* Slightly darker golden hover effect */
+  text-decoration: underline;
+  color: #FFA500; /* Slightly darker golden on hover */
 }
+
 
   /* Responsive Footer */
   @media (max-width: 768px) {
